@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer for Health & Well-being</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #dfe7fd;
+            color: blue;
+            padding: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url("image\\ 1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .hero-text {
+            width: 50%;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            text-align: left;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-buttons a {
+            background: #1434A4;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .hero-buttons a:hover {
+            background: #ffb6c1;
+            transform: scale(1.05);
+        }
+
+        .hero img {
+            width: 40%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .filter-section {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .filter-section select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        .scrollable-section {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            gap: 20px;
+            max-width: 100%;
+            scrollbar-width: thin;
+        }
+
+        .card {
+            flex: 0 0 250px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 350px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #333;
+            padding: 5px 10px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card button {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: auto;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #01579b;
+            transform: scale(1.05);
+        }
+
+        /* Reviews and Feedback Container */
+        .reviews-feedback-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+        }
+
+        .reviews {
+            flex: 1;
+            max-width: 55%;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Highlighted Rating Summary */
+        .rating-summary {
+            font-size: 16px;
+            font-weight: bold;
+            color: #00796b;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .rating-value {
+            font-size: 36px;
+        }
+
+        .rating-summary .exceptional {
+            font-size: 16px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .review-cards {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
+            max-width: 60%;
+        }
+
+        .review-card {
+            background: #fff;
+            padding: 15px;
+            width: 280px;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .review-card h3 {
+            font-size: 18px;
+            color: #00796b;
+        }
+
+        .review-card p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .review-card a {
+            color: #00796b;
+            text-decoration: none;
+        }
+
+        /* Reviewer Info Container */
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Profile Image Style */
+        .profile-image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .see-all-reviews {
+            background: none;
+            border: 1px solid #00796b;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #00796b;
+            border-radius: 20px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .feedback-form {
+            flex: 1;
+            width: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            text-align: right;
+            border: 3px solid #00AEEF;
+        }
+
+        .feedback-form h2 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: black;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #00AEEF;
+            border-radius: 5px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .feedback-form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .feedback-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .feedback-buttons button {
+            flex: 1;
+            background: #00AEEF;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback-buttons button:hover {
+            background: #008CBA;
+        }
+
+        .feedback-buttons button.cancel {
+            background: #ccc;
+            color: #333;
+        }
+
+        .feedback-buttons button.cancel:hover {
+            background: #bbb;
+        }
+
+        /* Expert Volunteers Section */
+        .expert-volunteers {
+            margin-top: 40px;
+        }
+
+        .expert-volunteers h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .expert-volunteers-list {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .volunteer-card {
+            flex: 0 0 250px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+        }
+
+        .volunteer-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .volunteer-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .volunteer-card p {
+            font-size: 14px;
+            color: #333;
+            padding: 5px 10px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .collaboration-partners {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .collaboration-partners h2 {
+            margin-bottom: 20px;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .partner-logo {
+            width: 120px;
+            
+            object-fit: contain;
+            /* Preserve aspect ratio, fit within bounds */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Life <span>Pulse</span></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="volunteer.html" class="active">Volunteer</a></li>
+            <li><a href="Table.html">Table</a></li>
+            <li><a href="Sitemap.html">Sitemap</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+            <li><a href="TeamPage.html">Team</a></li>
+        </ul>
+        <div class="top-btn">
+            <a href="Profile.html" class="nav-btn">Profile</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Join the Movement for Better Health</h1>
+            <p>Make a difference by supporting health and well-being initiatives in your community</p>
+            <div class="hero-buttons">
+                <a href="#">Get Involved</a>
+                <a href="#">Explore Programs</a>
+            </div>
+        </div>
+        <img src="images/image1.png" alt="Volunteering">
+    </div>
+
+    <div class="container">
+        <div class="filter-section">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option>Most Popular</option>
+                <option>Recently Added</option>
+                <option>Top Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="scrollable-section">
+            <div class="card">
+                <img src="images/health.jpg" alt="Health Camp">
+                <h3>Community Health Camp</h3>
+                <p>Join us in providing free medical checkups and awareness sessions.</p>
+                <button>Join Now</button>
+            </div>
+            <div class="card">
+                <img src="images/support.jpg" alt="Mental Health Support">
+                <h3>Mental Health Support</h3>
+                <p>Help people cope with stress and mental challenges.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <img src="donation.jpg" alt="Food Donation">
+                <h3>Food & Nutrition Drive</h3>
+                <p>Distribute healthy meals to those in need.</p>
+                <button>Sign Up</button>
+            </div>
+            <div class="card">
+                <img src="images/fitness.jpg" alt="Fitness Coaching">
+                <h3>Fitness & Wellness Coaching</h3>
+                <p>Encourage healthy lifestyles through exercise and mindfulnes.</p>
+                <button>Volunteer</button>
+            </div>
+            <div class="card">
+                <img src="meditation.jpg" alt="Health & Meditation">
+                <h3>Holistic Health & Meditation Programs</h3>
+                <p>Promote mental and emotional well-being through meditation and stress relief practices.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <!-- Reviews and Feedback Form Container -->
+        <div class="reviews-feedback-container">
+
+            <!-- Reviews Section -->
+            <div class="reviews">
+                <h2> User Ratings & Reviews</h2>
+                <p class="rating-summary">
+                    <span class="rating-value">9.4/10</span> <br>
+                    <span class="exceptional">Exceptional</span>
+                    <br>
+                    109 reviews
+                </p>
+                <button class="see-all-reviews">See all 109 reviews</button>
+                <div style="margin-top: 20px;">
+                    <!-- Review Cards Section -->
+                    <div class="review-cards">
+                        <div class="review-card">
+                            <h3>10/10 Excellent</h3>
+                            <p>We had an amazing experience volunteering for this program...<a href="#">See more</a></p>
+                            <!-- Reviewer Information with Profile Image -->
+                            <div class="reviewer-info">
+                                <img src="images/daniela.jpg" alt="Daniela G." class="profile-image">
+                                <small>Daniela G. - Aug 12, 2019</small>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <h3>10/10 Excellent</h3>
+                            <p>It was a rewarding experience helping the community...<a href="#">See more</a></p>
+                            <div class="reviewer-info">
+                                <img src="images/jean.jpg" alt="Dr. Jean M B." class="profile-image">
+                                <small>Dr. Jean M B. - Aug 10, 2018</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback Form -->
+            <div class="feedback-form">
+                <h2>Send us your review</h2>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="tel" placeholder="Phone Number">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Your feedback..."></textarea>
+
+                <div class="feedback-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expert Volunteers Section -->
+        <div class="expert-volunteers">
+            <h2>Meet Our Expert Volunteers</h2>
+            <div class="expert-volunteers-list">
+                <div class="volunteer-card">
+                    <img src="images/emily.jpg" alt="Emily R. - Nutritionist">
+                    <h3>Emily R.</h3>
+                    <p>Nutritionist</p>
+                    <p>Expertise in diet planning and nutritional guidance.</p>
+                </div>
+                <div class="volunteer-card">
+                    <img src="images/david.jpg" alt="David S. - Fitness Trainer">
+                    <h3>David S.</h3>
+                    <p>Fitness Trainer</p>
+                    <p>Specialized in personal training and physical well-being.</p>
+                </div>
+                <div class="volunteer-card">
+                    <img src="images/laura.jpg" alt="Laura M. - Psychologist">
+                    <h3>Laura M.</h3>
+                    <p>Psychologist</p>
+                    <p>Experienced in mental health support and counseling.</p>
+                </div>
+                <div class="volunteer-card">
+                    <img src="images/robert.jpg" alt="Robert K. - Health Educator">
+                    <h3>Robert K.</h3>
+                    <p>Health Educator</p>
+                    <p>Focused on promoting health awareness in the community.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collaboration Partners Section -->
+        <div class="collaboration-partners">
+            <h2>Our Collaboration Partners</h2>
+            <div class="partner-logos">
+                <img src="images/partner1.jpg" alt="World Health Organization" class="partner-logo">
+                <img src="images/partner7.jpg" alt="UNICEF" class="partner-logo">
+                <img src="images/partner8.jpg" alt="Red Cross" class="partner-logo">
+                <img src="images/partner9.jpg" alt="Doctors Without Borders"
+                    class="partner-logo">
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Explore Our Content Pages:</h3>
+                    <ul>
+                        <li><a href="content_ST3.html">Nutritions</a></li>
+                        <li><a href="content_ST2.html">Mental Health</a></li>
+                        <li><a href="content_ST1.html">Physical Health</a></li>
+                        <li><a href="content_ST3.html">Exercises</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Follow Us:</h3>
+                    <ul>
+                        <li><strong>Kavindu Rajapaksha:</strong>
+                            <a href="https://www.linkedin.com/in/kavindu-rajapaksha-982943293/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> |
+                            <a href="https://github.com/kavindusubhash28" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                        <li><strong>Dineth Weerasekara:</strong>
+                            <a href="https://www.linkedin.com/in/abeysingha-weerasekara-970932336/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> |
+                            <a href="https://github.com/DinethWr" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                        <li><strong>Lakdinu Viduth:</strong>
+                            <a href="https://www.linkedin.com/in/lakdinu-viduth-a12a4b31b/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> | 
+                            <a href="https://github.com/lakdinu2004" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                        <li><strong>Naveesha Amarasekara:</strong>
+                            <a href="https://www.linkedin.com/in/naveesha-amarasekara-275852332/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> |
+                            <a href="https://github.com/naveesha-amarasinghe" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>About Us:</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Page Editor</h3>
+                    <div class="notify">
+                        <ul>
+                            <li><a href="pageEditor_ST1.html">Student 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Life Pulse Website| All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

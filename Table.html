@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="Home.html" class="logo">Life <span>Pulse</span></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="Table.html" class="active">Table</a></li>
+            <li><a href="Sitemap.html">Sitemap</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+            <li><a href="TeamPage.html">Team</a></li>
+        </ul>
+        <div class="top-btn">
+            <a href="Profile.html" class="nav-btn">Profile</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Table Section -->
+<section class="table-section">
+    <h1 class="section-title">📊 Nutritional Value & Exercise Plan</h1>
+
+
+<!-- Nutritional Table -->
+<div class="table-container">
+    <h2>🥗 Nutritional Value of Common Fruits</h2>
+    <table>
+        <tr>
+            <th colspan="6">
+                <img src="images/logo.png" alt="Website Logo" class="table-logo">
+            </th>
+        </tr>
+        <tr>
+            <th>Fruit</th>
+            <th>Calories (per 100g)</th>
+            <th>Protein (g)</th>
+            <th>Fat (g)</th>
+            <th>Sugar (g)</th>
+            <th>Health Rating</th>
+        </tr>
+        <tr>
+            <td>🍏 Apple</td>
+            <td>52</td>
+            <td>0.3</td>
+            <td>0.2</td>
+            <td>10</td>
+            <td class="tooltip" data-info="Rich in fiber & vitamins">✅ Healthy</td>
+        </tr>
+        <tr>
+            <td>🍌 Banana</td>
+            <td>89</td>
+            <td>1.1</td>
+            <td>0.3</td>
+            <td>12</td>
+            <td class="tooltip" data-info="Great source of potassium">✅ Healthy</td>
+        </tr>
+        <tr>
+            <td>🍇 Grapes</td>
+            <td>69</td>
+            <td>0.7</td>
+            <td>0.2</td>
+            <td>16</td>
+            <td class="tooltip" data-info="Rich in antioxidants">✅ Healthy</td>
+        </tr>
+        <tr>
+            <td>🍓 Strawberries</td>
+            <td>32</td>
+            <td>0.7</td>
+            <td>0.3</td>
+            <td>4.9</td>
+            <td class="tooltip" data-info="High in Vitamin C & low in sugar">✅ Very Healthy</td>
+        </tr>
+        <tr>
+            <td>🍍 Pineapple</td>
+            <td>50</td>
+            <td>0.5</td>
+            <td>0.1</td>
+            <td>9.9</td>
+            <td class="tooltip" data-info="Boosts digestion with bromelain">✅ Healthy</td>
+        </tr>
+        <tr>
+            <td>🥭 Mango</td>
+            <td>60</td>
+            <td>0.8</td>
+            <td>0.4</td>
+            <td>14</td>
+            <td class="tooltip" data-info="Rich in Vitamin A & C">✅ Healthy</td>
+        </tr>
+        <tr>
+            <td>🍊 Orange</td>
+            <td>43</td>
+            <td>1.0</td>
+            <td>0.1</td>
+            <td>8.2</td>
+            <td class="tooltip" data-info="Excellent source of Vitamin C">✅ Very Healthy</td>
+        </tr>
+        <tr>
+            <td>🍉 Watermelon</td>
+            <td>30</td>
+            <td>0.6</td>
+            <td>0.2</td>
+            <td>6.2</td>
+            <td class="tooltip" data-info="High in water content, great for hydration">✅ Very Healthy</td>
+        </tr>
+    </table>
+</div>
+
+    <!-- Exercise Table -->
+<div class="table-container">
+    <h2>🏋️‍♂️ Weekly Exercise Plan</h2>
+    <table>
+        <tr>
+            <th colspan="5">
+                <img src="images/logo.png" alt="Website Logo" class="table-logo">
+            </th>
+        </tr>
+        <tr>
+            <th>Day</th>
+            <th>Exercise Type</th>
+            <th>Duration</th>
+            <th>Calories Burned</th>
+            <th>Benefits</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>🏃‍♂️ Running</td>
+            <td>30 min</td>
+            <td>~300 kcal</td>
+            <td class="tooltip" data-info="Boosts endurance & heart health">Improves stamina</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>🏋️ Strength Training</td>
+            <td>40 min</td>
+            <td>~250 kcal</td>
+            <td class="tooltip" data-info="Increases muscle mass & metabolism">Builds muscles</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>🧘‍♀️ Yoga</td>
+            <td>45 min</td>
+            <td>~180 kcal</td>
+            <td class="tooltip" data-info="Reduces stress & increases flexibility">Enhances flexibility</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>🚴 Cycling</td>
+            <td>30 min</td>
+            <td>~280 kcal</td>
+            <td class="tooltip" data-info="Strengthens leg muscles & heart health">Boosts endurance</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>🏊‍♀️ Swimming</td>
+            <td>45 min</td>
+            <td>~400 kcal</td>
+            <td class="tooltip" data-info="Full-body workout & joint-friendly">Improves cardio fitness</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>🥊 Boxing</td>
+            <td>40 min</td>
+            <td>~500 kcal</td>
+            <td class="tooltip" data-info="Improves coordination & burns fat">Enhances agility</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>🏕️ Hiking</td>
+            <td>60 min</td>
+            <td>~350 kcal</td>
+            <td class="tooltip" data-info="Boosts endurance & mental well-being">Strengthens legs</td>
+        </tr>
+        <tr>
+            <td>Alternate Days</td>
+            <td>🪑 Bodyweight Exercises (Squats, Push-ups, Planks)</td>
+            <td>20 min</td>
+            <td>~200 kcal</td>
+            <td class="tooltip" data-info="Builds strength & requires no equipment">Improves core strength</td>
+        </tr>
+    </table>
+</div>
+
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Explore Our Content Pages:</h3>
+                    <ul>
+                        <li><a href="content_ST3.html">Nutritions</a></li>
+                        <li><a href="content_ST2.html">Mental Health</a></li>
+                        <li><a href="content_ST1.html">Physical Health</a></li>
+                        <li><a href="content_ST3.html">Exercises</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Follow Us:</h3>
+                    <ul>
+                        <li><strong>Kavindu Rajapaksha:</strong>
+                            <a href="https://www.linkedin.com/in/kavindu-rajapaksha-982943293/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> |
+                            <a href="https://github.com/kavindusubhash28" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                        <li><strong>Dineth Weerasekara:</strong>
+                            <a href="https://www.linkedin.com/in/abeysingha-weerasekara-970932336/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> |
+                            <a href="https://github.com/DinethWr" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                        <li><strong>Lakdinu Viduth:</strong>
+                            <a href="https://www.linkedin.com/in/lakdinu-viduth-a12a4b31b/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> | 
+                            <a href="https://github.com/lakdinu2004" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                        <li><strong>Naveesha Amarasekara:</strong>
+                            <a href="https://www.linkedin.com/in/naveesha-amarasekara-275852332/" target="_blank">
+                                <i class="fab fa-linkedin"></i> 
+                            </a> |
+                            <a href="https://github.com/naveesha-amarasinghe" target="_blank">
+                                <i class="fab fa-github"></i> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>About Us:</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Page Editor</h3>
+                    <div class="notify">
+                        <ul>
+                            <li><a href="pageEditor_ST2.html">Student 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Life Pulse Website| All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

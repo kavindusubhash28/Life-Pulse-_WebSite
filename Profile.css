@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+:root {
+    --bg-color: #f2f7f5;
+    --snd-bg-color: #dfe7fd;
+    --text-color: #333;
+    --main-color: #5ab9ea;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 100px;
+    font-family: 'roboto', sans-serif,Arial, Helvetica;
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 8% 2rem;
+}
+/* Header Section */
+header {
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+.logo {
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 20px; 
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+.navbar a {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 2rem;
+    transition: all 0.s ease;
+    /* border-bottom: 3px solid transparent; */
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+.nav-btn {
+    display: flex;
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    color: white;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+.nav-btn:hover {
+    background: #3a91c2;
+    box-shadow: 0 0 10px var(--main-color);
+}
+#menu-icon {
+    font-size: 35px;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+.profile{
+    padding: 20px;
+    width: 18%;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow:0 4px 8px rgba(0, 0, 0.1);
+    margin-top:20px;
+    text-align: left;
+    margin: auto;
+    }
+div img{
+    width: 200px;
+    height: 200px;   
+}
+.user-info{
+    position: center;
+    font-size: 21;
+}
+
+body{
+    background-color: rgb(146, 180, 242);
+}    
+
+.skill-card {
+    width:90%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    margin: 25px;
+}
+
+.info{
+    width:90%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    margin: 25px;
+}
+.section-heading{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+.category-list{
+    list-style-type: none;
+    padding-left:0;
+    margin: 0;
+}
+.category-list li {
+    font-size: 18px;
+    margin: 0;
+}
+.progress-bar-container{
+    background-color:white;
+    border-radius:10px;
+    margin-top: 10px;
+    width:100%;
+    height:20px;
+}
+.progress-bar{
+    height:100%;
+    border-radius: 10px;
+    color:white;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+}
+.skill-bar{
+    background-color:#098fa4;
+}
+.Goals-card {
+    width:90%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    margin: 25px;
+}
+.schedule-table td{
+    color: black;
+}
+
+.support{
+    width:90%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    margin: 25px;
+}
+.Frustrations-card {
+    width:90%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    margin: 25px;
+
+}
+
+.section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+.volunteer-list{
+    list-style: none;
+    padding: 0;
+}
+.volunteer-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    
+}
+.volunteer-icon {
+    width: 50px;
+    height: 50px;
+    margin-right:15px;
+    border-radius:50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+
+}
+.icon-list {
+    list-style: none;
+    padding: 0;
+}
+.icon-list li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+.icon-text{
+    font-size: 18px;
+    color:black;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+.schedule-table th {
+    background-color: white ;
+    color: black;
+}
+.available {
+    background-color:rgba (0, 102, 204, 0.7);
+    font-weight: bold;
+    color: white;
+}
+.unavailable {
+    background-color:rgba (0, 102, 204, 0.7);
+    font-weight: bold;
+    color: white;
+}
+.contact-card {
+    width:90%;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    margin-top: 20px;
+    margin: 25px;
+}
+.contact-from {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+.contact-from label {
+    font-size: 16px;
+    font-weight: bold;
+    color:black;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size:16px;
+}
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+.send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(28, 170, 158, 0.8);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.send-button:hover {
+    background-color: rgba(0, 102, 204, 1);
+    transform: translateY(-5px);
+}
+.profile-card:hover{
+    transform: scale(1.02);
+}
+.user-card:hover{
+    transform: scale(1.02);
+}
+.skill-card:hover{
+    transform: scale(1.02);
+}	
+.Goals-card:hover{
+    transform: scale(1.02);
+}
+.Frustrations-card:hover{
+    transform: scale(1.02);
+}
+.contact-card:hover{
+    transform: scale(1.02);
+}
+.schedule-table tr:hover {
+    background-color:#0288d1;
+}
+
+
+
+
+/* Footer CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'roboto';
+    
+}
+.container{
+    max-width: 1170px;
+    line-height: 1.5;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    width: 100%;
+    padding: 50px 0;
+    background-color: rgb(43, 61, 79);
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h3{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 550;
+    position: relative;
+}
+.footer-col ul li{
+    margin-bottom: 10px;
+}
+.footer ul li {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+}
+.footer .container a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color:  rgb(26, 188, 156);
+    padding-left: 10px ;
+    text-decoration: underline;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(26, 188, 156);
+    margin: 0 5px 5px 0;
+    text-align: center;
+    border-radius: 40%;
+    line-height: 40px;
+    transform: all 0.3s ease;
+}
+.footer-col .social-links a:hover{
+    background-color: white;
+    color: rgb(43, 61, 79);
+}
+.footer-col .notify input{
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    height: 25px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+.footer-col .notify button{
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    margin-left: 30%;
+    color: rgb(43, 61, 79);
+}
+.footer-col .notify button:hover{
+    background-color: rgb(26, 188, 156);
+    color: white;
+}
+.footer-bottom a,
+.footer-bottom p{
+    text-align: center;
+    font-size: 10px;
+    color: white;
+}
+
+
+
